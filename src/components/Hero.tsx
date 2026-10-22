@@ -1,15 +1,13 @@
-import React, { useState } from 'react';
-import { MessageCircle, ArrowRight, MapPin, Sparkles, Utensils } from 'lucide-react';
+import React from 'react';
+import { MessageCircle, ArrowRight, MapPin } from 'lucide-react';
 import { BusinessConfig, createWhatsAppUrl } from '../config/business';
-import { heroFoodSpread } from '../assets/images';
+import { SafeImage } from './SafeImage';
 
 interface HeroProps {
   config: BusinessConfig;
 }
 
 export const Hero: React.FC<HeroProps> = ({ config }) => {
-  const [imgLoaded, setImgLoaded] = useState(false);
-  const [imgError, setImgError] = useState(false);
 
   const heroWhatsAppUrl = createWhatsAppUrl(
     config.whatsAppNumber,
@@ -99,27 +97,12 @@ export const Hero: React.FC<HeroProps> = ({ config }) => {
               <div className="absolute -inset-2 bg-gradient-to-tr from-[#8A3D24]/10 via-transparent to-[#3F5E4D]/10 rounded-3xl blur-sm" />
               
               <div className="relative overflow-hidden rounded-2xl shadow-xl border border-[#E2D6C5] bg-[#EFE8DC] aspect-16/10">
-                {/* Fallback container if image is loading or fails */}
-                {(!imgLoaded || imgError) && (
-                  <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-[#F5EFE6] to-[#E9DFCF] text-[#5A4638]">
-                    <Utensils className="w-12 h-12 text-[#8A3D24] mb-2 stroke-1" />
-                    <p className="font-serif font-bold text-lg text-[#2D1F17]">Souji’s Kitchen Artisanal Food</p>
-                    <p className="text-xs text-[#7A6757]">Guntur, Andhra Pradesh</p>
-                  </div>
-                )}
-
-                <img
-                  src={heroFoodSpread}
+                <SafeImage
+                  src="/images/hero-food.jpg"
                   alt="Artisanal homemade food spread from Souji’s Kitchen featuring South Indian millet snacks, tiffins, and bobbatlu"
-                  referrerPolicy="no-referrer"
-                  className={`w-full h-full object-cover transition-all duration-700 group-hover:scale-102 ${
-                    imgLoaded ? 'opacity-100' : 'opacity-0'
-                  }`}
-                  onLoad={() => setImgLoaded(true)}
-                  onError={() => {
-                    setImgError(true);
-                    setImgLoaded(true);
-                  }}
+                  fallbackTitle="Artisanal Homemade Food Spread"
+                  fallbackCategory="Daily Fresh Spread"
+                  className="w-full h-full object-cover transition-all duration-700 group-hover:scale-102"
                 />
 
                 {/* Subtle bottom caption gradient for authentic editorial depth */}

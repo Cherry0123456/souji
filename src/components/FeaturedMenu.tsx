@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { MessageCircle, Search, Info, Check } from 'lucide-react';
 import { BusinessConfig, createWhatsAppUrl } from '../config/business';
 import { MENU_ITEMS, MENU_CATEGORIES, MenuItem } from '../data/menuData';
+import { SafeImage } from './SafeImage';
 
 interface FeaturedMenuProps {
   config: BusinessConfig;
@@ -125,10 +126,11 @@ export const FeaturedMenu: React.FC<FeaturedMenuProps> = ({ config, onSelectPhot
                   }
                   title="Click to view full image"
                 >
-                  <img
+                  <SafeImage
                     src={item.image}
                     alt={item.imageAlt}
-                    referrerPolicy="no-referrer"
+                    fallbackTitle={item.name}
+                    fallbackCategory={item.categoryLabel}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
                   />

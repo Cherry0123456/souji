@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { X, MessageCircle } from 'lucide-react';
 import { BusinessConfig, createWhatsAppUrl } from '../config/business';
+import { SafeImage } from './SafeImage';
 
 export interface LightboxPhoto {
   title: string;
@@ -61,10 +62,11 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({ photo, onClose, co
 
         {/* Enlarged Image Area */}
         <div className="relative bg-[#1A120D] flex items-center justify-center overflow-hidden min-h-[280px] max-h-[60vh]">
-          <img
+          <SafeImage
             src={photo.image}
             alt={photo.title}
-            referrerPolicy="no-referrer"
+            fallbackTitle={photo.title}
+            fallbackCategory={photo.category}
             className="w-full h-full object-contain max-h-[60vh]"
           />
         </div>

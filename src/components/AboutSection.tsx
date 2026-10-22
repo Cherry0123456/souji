@@ -1,7 +1,7 @@
 import React from 'react';
 import { Heart, Sparkles, MapPin, CheckCircle2 } from 'lucide-react';
 import { BusinessConfig } from '../config/business';
-import { kitchenCraftAbout } from '../assets/images';
+import { SafeImage } from './SafeImage';
 
 interface AboutSectionProps {
   config: BusinessConfig;
@@ -17,10 +17,11 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ config }) => {
           <div className="lg:col-span-5 order-2 lg:order-1">
             <div className="relative">
               <div className="overflow-hidden rounded-2xl shadow-lg border border-[#E3D8C8] bg-[#EAE2D5] aspect-4/3 sm:aspect-1/1 lg:aspect-4/3">
-                <img
-                  src={kitchenCraftAbout}
+                <SafeImage
+                  src="/images/kitchen-craft.jpg"
                   alt="Traditional handcrafted homemade food preparation at Souji’s Kitchen"
-                  referrerPolicy="no-referrer"
+                  fallbackTitle="Artisanal Food Preparation"
+                  fallbackCategory="Handcrafted with Care"
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />

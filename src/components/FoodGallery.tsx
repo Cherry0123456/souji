@@ -2,6 +2,7 @@ import React from 'react';
 import { Instagram, ZoomIn, Camera } from 'lucide-react';
 import { GALLERY_ITEMS, GalleryPhoto } from '../data/menuData';
 import { BusinessConfig } from '../config/business';
+import { SafeImage } from './SafeImage';
 
 interface FoodGalleryProps {
   config: BusinessConfig;
@@ -47,10 +48,11 @@ export const FoodGallery: React.FC<FoodGalleryProps> = ({ config, onSelectPhoto 
               onClick={() => onSelectPhoto(item)}
               className="group relative rounded-2xl overflow-hidden aspect-4/3 bg-[#EAE2D5] border border-[#E3D8C8] shadow-xs hover:shadow-md transition-all duration-300 cursor-pointer"
             >
-              <img
+              <SafeImage
                 src={item.image}
                 alt={item.alt}
-                referrerPolicy="no-referrer"
+                fallbackTitle={item.title}
+                fallbackCategory={item.category}
                 loading="lazy"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
