@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { MessageCircle, ArrowRight, MapPin, Sparkles, Utensils } from 'lucide-react';
 import { BusinessConfig, createWhatsAppUrl } from '../config/business';
+import { heroFoodSpread } from '../assets/images';
 
 interface HeroProps {
   config: BusinessConfig;
@@ -108,7 +109,7 @@ export const Hero: React.FC<HeroProps> = ({ config }) => {
                 )}
 
                 <img
-                  src="/src/assets/images/hero_food_spread_1792641870977.jpg"
+                  src={heroFoodSpread}
                   alt="Artisanal homemade food spread from Souji’s Kitchen featuring South Indian millet snacks, tiffins, and bobbatlu"
                   referrerPolicy="no-referrer"
                   className={`w-full h-full object-cover transition-all duration-700 group-hover:scale-102 ${

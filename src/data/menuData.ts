@@ -1,3 +1,12 @@
+import {
+  heroFoodSpread,
+  milletSnacksTray,
+  traditionalBobbatlu,
+  milletNoodlesDish,
+  eveningTiffinsPlatter,
+  kitchenCraftAbout,
+} from '../assets/images';
+
 export interface MenuItem {
   id: string;
   name: string;
@@ -27,7 +36,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: 'Crisp, aromatic South Indian savory snacks made from wholesome millets, fresh roasted curry leaves, and cumin.',
     priceNote: 'Enquire for pack sizes & price',
     isPopular: true,
-    image: '/src/assets/images/millet_snacks_tray_1792641871151.jpg',
+    image: milletSnacksTray,
     imageAlt: 'Golden crisp pure millet murukku and savory kara snacks'
   },
   {
@@ -38,7 +47,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: 'Freshly prepared Andhra sweet flatbread filled with slow-cooked jaggery and lentils, brushed with aromatic ghee.',
     priceNote: 'Enquire for daily batch price',
     isPopular: true,
-    image: '/src/assets/images/traditional_bobbatlu_1792641871143.jpg',
+    image: traditionalBobbatlu,
     imageAlt: 'Authentic warm Andhra bobbatlu with pure ghee on banana leaf'
   },
   {
@@ -49,7 +58,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: 'Wholesome stir-fried millet noodles tossed with colorful crisp seasonal vegetables and mild spices — zero maida.',
     priceNote: 'Enquire for portion availability',
     isPopular: true,
-    image: '/src/assets/images/millet_noodles_dish_1792641872496.jpg',
+    image: milletNoodlesDish,
     imageAlt: 'Steaming bowl of nutritious homemade millet noodles'
   },
   {
@@ -60,7 +69,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: 'Soft steamed millet idlis and crunchy savory fritters paired with fresh ground coconut chutney and spicy Guntur tomato dip.',
     priceNote: 'Enquire for evening tiffin menu',
     isPopular: true,
-    image: '/src/assets/images/evening_tiffins_platter_1792641873850.jpg',
+    image: eveningTiffinsPlatter,
     imageAlt: 'Traditional South Indian evening tiffins spread with chutneys'
   },
   {
@@ -70,7 +79,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryLabel: 'Pure Millet Snacks',
     description: 'Handmade crunchy millet crackers enriched with sesame, roasted split peas, and green chilies. Perfect healthy tea-time snack.',
     priceNote: 'Enquire for batch availability',
-    image: '/src/assets/images/millet_snacks_tray_1792641871151.jpg',
+    image: milletSnacksTray,
     imageAlt: 'Handcrafted traditional millet chekkalu and mixture'
   },
   {
@@ -80,7 +89,7 @@ export const MENU_ITEMS: MenuItem[] = [
     categoryLabel: 'Millet Noodles & Pasta',
     description: 'Health-conscious alternative made with pure millet grains, tossed in light homemade sauce with local farm herbs.',
     priceNote: 'Enquire for fresh prep',
-    image: '/src/assets/images/millet_noodles_dish_1792641872496.jpg',
+    image: milletNoodlesDish,
     imageAlt: 'Homemade millet pasta tossed with natural herbs'
   }
 ];
@@ -100,7 +109,7 @@ export const GALLERY_ITEMS: GalleryPhoto[] = [
     title: 'Artisanal Home Food Spread',
     caption: 'A complete view of fresh tiffins, sweets, and millet snacks prepared daily.',
     category: 'Spread',
-    image: '/src/assets/images/hero_food_spread_1792641870977.jpg',
+    image: heroFoodSpread,
     alt: 'Grand South Indian food spread at Souji’s Kitchen'
   },
   {
@@ -108,7 +117,7 @@ export const GALLERY_ITEMS: GalleryPhoto[] = [
     title: 'Pure Millet Kara Snacks',
     caption: 'Golden, extra-crisp snacks made with traditional recipes and whole millets.',
     category: 'Snacks',
-    image: '/src/assets/images/millet_snacks_tray_1792641871151.jpg',
+    image: milletSnacksTray,
     alt: 'Crispy millet ribbon murukku on brass dish'
   },
   {
@@ -116,7 +125,7 @@ export const GALLERY_ITEMS: GalleryPhoto[] = [
     title: 'Warm Andhra Bobbatlu',
     caption: 'Melt-in-mouth jaggery sweet flatbread finished with pure desi ghee.',
     category: 'Sweets',
-    image: '/src/assets/images/traditional_bobbatlu_1792641871143.jpg',
+    image: traditionalBobbatlu,
     alt: 'Freshly prepared ghee bobbatlu on banana leaf'
   },
   {
@@ -124,7 +133,7 @@ export const GALLERY_ITEMS: GalleryPhoto[] = [
     title: 'Healthy Millet Noodles',
     caption: 'Wholesome meals with fresh vegetables and zero preservatives.',
     category: 'Noodles',
-    image: '/src/assets/images/millet_noodles_dish_1792641872496.jpg',
+    image: milletNoodlesDish,
     alt: 'Freshly stir-fried millet noodles in bowl'
   },
   {
@@ -132,7 +141,7 @@ export const GALLERY_ITEMS: GalleryPhoto[] = [
     title: 'Evening Tiffin Essentials',
     caption: 'Steamed millet idlis, crispy savories, and traditional home chutneys.',
     category: 'Tiffins',
-    image: '/src/assets/images/evening_tiffins_platter_1792641873850.jpg',
+    image: eveningTiffinsPlatter,
     alt: 'Evening tiffins with variety of house-ground chutneys'
   },
   {
@@ -140,7 +149,7 @@ export const GALLERY_ITEMS: GalleryPhoto[] = [
     title: 'Handcrafted with Care',
     caption: 'Traditional techniques passed down through generations in Guntur.',
     category: 'Craft',
-    image: '/src/assets/images/kitchen_craft_about_1792641872832.jpg',
+    image: kitchenCraftAbout,
     alt: 'Artisanal dough preparation for traditional homemade food'
   }
 ];
