@@ -1,0 +1,6 @@
+{
+  "name": "Souji's Kitchen | Homemade Food in Guntur",
+  "description": "Discover delicious homemade food, pure millet snacks, and traditional sweets from Souji's Kitchen in Guntur, Andhra Pradesh. Enquire and order directly on WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
